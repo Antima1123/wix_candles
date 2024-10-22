@@ -9,18 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hono/clerk-auth": "^2.0.0",
+    "@tanstack/react-query": "^5.59.15",
+    "@xata.io/client": "^0.0.0-next.va121e4207b94bfe0a3c025fc00b247b923880930",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.35.2",
+    "hono": "^4.6.5",
+    "next": "14.2.15",
+    "postgres": "^3.4.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.15"
+    "react-icons": "^5.3.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "drizzle-kit": "^0.26.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.15",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.15"
+    "tsx": "^4.19.1",
+    "typescript": "^5"
   }
 }

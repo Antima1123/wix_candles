@@ -1,0 +1,18 @@
+{
+  "done": true,
+  "migration": {
+    "name": "sql_763f2da241c054",
+    "operations": [
+      {
+        "sql": {
+          "up": "CREATE TABLE IF NOT EXISTS \"user\" (id text PRIMARY KEY NOT NULL, name text NOT NULL, age text NOT NULL, email text NOT NULL)"
+        }
+      }
+    ]
+  },
+  "migrationType": "inferred",
+  "name": "sql_763f2da241c054",
+  "parent": "mig_csb8nmsjvfnl258s6c30",
+  "schema": "public",
+  "startedAt": "2024-10-21T17:14:22.493596Z"
+}
