@@ -1,7 +1,0 @@
-"@typescript-eslint/no-empty-object-type": [
-      "error", // or "warn" if you prefer warnings
-      {
-        "allowInterfaces": true,  // Allow empty interfaces
-        "allowTypes": false       // Disallow empty type aliases
-      }
-    ]

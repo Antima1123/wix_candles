@@ -21,8 +21,8 @@ export default function Home() {
   return (
     <div>
       {
-        data.map((x)=>(
-          <div>{x.name}{x.email}</div>
+        data.map((x,index)=>(
+          <div key={index}>{x.name}{x.email}</div>
         ))
       }
     </div>
