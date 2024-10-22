@@ -1,6 +1,4 @@
-import { IoGiftOutline, IoSearchOutline } from "react-icons/io5"
 import { Navigation } from "./navigation"
-import { GiShoppingBag } from "react-icons/gi"
 
 const Header = () =>{
     return(
