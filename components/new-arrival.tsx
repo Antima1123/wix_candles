@@ -9,31 +9,31 @@ const carouselItems = [
     },
     {
       id: 2,
-      imageUrl: "/banner-1.jpg",
+      imageUrl: "/product-item-1.jpg",
       title: "Item 2",
       description: "This is the second item in the carousel."
     },
     {
       id: 2,
-      imageUrl: "/banner-2.jpg",
+      imageUrl: "/product-item-2.jpg",
       title: "Item 2",
       description: "This is the second item in the carousel."
     },
     {
       id: 2,
-      imageUrl: "/banner-3.jpg",
+      imageUrl: "/product-item-3.jpg",
       title: "Item 2",
       description: "This is the second item in the carousel."
     },
     {
       id: 2,
-      imageUrl: "/banner-4.jpg",
+      imageUrl: "/product-item-4.jpg",
       title: "Item 2",
       description: "This is the second item in the carousel."
     },
     {
       id: 2,
-      imageUrl: "/banner-5.jpg",
+      imageUrl: "/product-item-10.jpg",
       title: "Item 2",
       description: "This is the second item in the carousel."
     },
