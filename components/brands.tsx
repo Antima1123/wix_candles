@@ -7,8 +7,8 @@ export const Brands = ({img}:props) =>{
         <div className="">
             <Image
                 src={img}
-                height={250}
-                width={250}
+                height={200}
+                width={200}
                 alt="logo1"
                 style={{ objectFit: 'contain' }}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

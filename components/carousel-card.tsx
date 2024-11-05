@@ -35,7 +35,7 @@ export default function Component({ items = [], no_items, position_arrow }: Cust
     >
       <CarouselContent className="-ml-4">
         {items.map((item) => (
-          <CarouselItem key={item.id} className={`pl-4 md:basis-${no_items} `}>
+          <CarouselItem key={item.id} className={`pl-4 ${no_items=="1/4"? "md:basis-1/4":"md:basis-1/3"}`}>
             <div className="flex flex-col items-center">
               <div className="relative w-full aspect-[1] mb-4 h-[450px]">
                 <Image
