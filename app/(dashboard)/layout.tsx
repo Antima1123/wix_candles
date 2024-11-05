@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Footer from "../../components/footer";
+import Header from "@/components/header";
 
 type props = {
     children: React.ReactNode
 }
 const DashboardLayout = ({children}: props) =>{
     return(
-        <div>
+        <div className=" relative w-full h-full">
             <Header/>
             {children}
             <Footer/>
