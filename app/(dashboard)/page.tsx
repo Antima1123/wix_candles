@@ -9,6 +9,7 @@ import { NewArrival } from "@/components/new-arrival";
 import { BigImage } from "@/components/big-image";
 import { VideoPage } from "@/components/video";
 import { BlogPost } from "@/components/blog-post";
+import { Brands } from "@/components/brands";
 export default function Home() {
 
   const dataQuery = useGetUsers();
@@ -59,6 +60,24 @@ export default function Home() {
       p2: "Dignissim lacus,turpis ut suspendisse vel tellus.Turpis purus,gravida orci,fringilla..."
     }
   ]
+
+  const brands = [
+    {
+      img: "/logo1.png",
+    }, 
+    {
+      img: "/logo2.png",
+    },
+    {
+      img: "/logo3.png",
+    },
+    {
+      img: "/logo4.png",
+    },
+    {
+      img: "/logo5.png",
+    },
+  ]
   
   return (
     <div className="h-full w-full flex relative items-center justify-center flex-col">
@@ -77,7 +96,7 @@ export default function Home() {
       <NewArrival/>
       <BigImage/>
       <VideoPage/>
-      <div className="grid md:grid-cols-3 max-w-screen-2xl mx-auto w-full gap-8 md:gap-2  md:px-16 mt-20 px-2">
+      <div className="grid md:grid-cols-3 max-w-screen-2xl mx-auto w-full gap-8 md:gap-2 md:px-16 mt-20 px-2">
         {blogpost.map((blog,index)=>(
           <BlogPost
             key={index}
@@ -85,6 +104,14 @@ export default function Home() {
             p1={blog.p1}
             heading={blog.heading}
             p2={blog.p2}
+          />
+        ))}
+      </div>
+      <div className="max-w-screen-2xl mx-auto grid md:grid-cols-5 w-full md:px-16 gap-8 px-2 mt-20">
+        {brands.map((brand, index)=>(
+          <Brands
+          key={index}
+          img={brand.img}
           />
         ))}
       </div>

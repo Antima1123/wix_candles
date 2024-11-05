@@ -32,6 +32,7 @@ export const Services= () =>{
         <div className="px-16 grid md:grid-cols-4 gap-16 py-32 max-w-screen-2xl mx-auto">
             {services.map((serv,index)=>(
             <ServiceCard
+            key={index}
             icon={serv.icon}
             head={serv.head}
             des={serv.des}
