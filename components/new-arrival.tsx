@@ -28,10 +28,11 @@ const carouselItems = [
     },
 
   ];
+  
 export const NewArrival = () =>{
     return(
         <div className="w-full ">
-          <div className="px-16 py-32 max-w-screen-2xl mx-auto">
+          <div className="md:px-16 md:mt-20 mt-8 max-w-screen-2xl mx-auto">
             <Component position_arrow="center" no_items="1/4" items={carouselItems}/>
           </div>
         </div>

@@ -1,0 +1,18 @@
+{
+  "done": true,
+  "migration": {
+    "name": "sql_ac1ca6fce2eea4",
+    "operations": [
+      {
+        "sql": {
+          "up": "CREATE TABLE IF NOT EXISTS product (id text PRIMARY KEY NOT NULL, name text NOT NULL, description text NOT NULL, main_image text NOT NULL, sub_image text[], old_price text NOT NULL, new_price text NOT NULL, featured boolean DEFAULT false, slug text NOT NULL, category text, created_at timestamp DEFAULT now(), updated_at timestamp DEFAULT now())"
+        }
+      }
+    ]
+  },
+  "migrationType": "inferred",
+  "name": "sql_ac1ca6fce2eea4",
+  "parent": "sql_763f2da241c054",
+  "schema": "public",
+  "startedAt": "2025-04-10T15:56:04.621317Z"
+}

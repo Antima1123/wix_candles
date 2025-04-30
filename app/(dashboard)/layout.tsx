@@ -9,7 +9,9 @@ const DashboardLayout = ({children}: props) =>{
     return(
         <div className=" relative w-full h-full">
             <Header/>
+            <div className="min-h-screen">
             {children}
+            </div>
             <Footer/>
         </div>
     )

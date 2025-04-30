@@ -23,6 +23,7 @@ interface CustomCarouselProps {
   position_arrow: string
 }
 
+
 export default function Component({ items = [], no_items, position_arrow }: CustomCarouselProps) {
   return (
     <Carousel
@@ -54,10 +55,10 @@ export default function Component({ items = [], no_items, position_arrow }: Cust
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className={`absolute left-4 ${position_arrow == "top" ? "-top-2" : "top-44"} -translate-y-1/2 h-20 w-20 bg-background/80 border-2 border-gray-400`}>
+      <CarouselPrevious className={`absolute left-4 ${position_arrow == "top" ? "-top-2" : "top-56 md:-left-14"} -translate-y-1/2 h-20 w-20 bg-background/80 border-2 border-gray-400`}>
         <ChevronLeft className="h-16 w-16" />
       </CarouselPrevious>
-      <CarouselNext className={`absolute right-4 ${position_arrow == "top" ? "-top-2" : "top-44"} -translate-y-1/2 h-20 w-20 bg-background/80 border-2 border-gray-400`}>
+      <CarouselNext className={`absolute right-4 ${position_arrow == "top" ? "-top-2" : "top-56 md:-right-14"} -translate-y-1/2 h-20 w-20 bg-background/80 border-2 border-gray-400`}>
         <ChevronRight className="h-8 w-8" />
       </CarouselNext>
     </Carousel>

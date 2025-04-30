@@ -1,0 +1,18 @@
+{
+  "done": true,
+  "migration": {
+    "name": "sql_01beb0397d666e",
+    "operations": [
+      {
+        "sql": {
+          "up": "CREATE TABLE product_table (id text PRIMARY KEY NOT NULL, img text NOT NULL, other_images text[], productname text NOT NULL, price int NOT NULL, slug text NOT NULL, description text NOT NULL, \"inStock\" int NOT NULL, previous_price int, featured boolean DEFAULT false, category text, created_at timestamp DEFAULT now(), updated_at timestamp DEFAULT now())"
+        }
+      }
+    ]
+  },
+  "migrationType": "inferred",
+  "name": "sql_01beb0397d666e",
+  "parent": "sql_0b5dcef8097ed1",
+  "schema": "public",
+  "startedAt": "2025-04-13T10:43:20.749378Z"
+}

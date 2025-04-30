@@ -1,0 +1,18 @@
+{
+  "done": true,
+  "migration": {
+    "name": "sql_193888f23e63e0",
+    "operations": [
+      {
+        "sql": {
+          "up": "CREATE TABLE admin_table (id text PRIMARY KEY NOT NULL, admin_name text NOT NULL, password text NOT NULL)"
+        }
+      }
+    ]
+  },
+  "migrationType": "inferred",
+  "name": "sql_193888f23e63e0",
+  "parent": "mig_cvtpadfo1tkgc98ji4t0",
+  "schema": "public",
+  "startedAt": "2025-04-13T10:43:19.021218Z"
+}

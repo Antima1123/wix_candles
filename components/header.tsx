@@ -5,6 +5,7 @@ import { GiShoppingBag } from "react-icons/gi";
 import { FaRegHeart } from "react-icons/fa";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
+import Link from "next/link";
 
 const Header = () =>{
     const [active, setActive] = useState(false);
@@ -51,11 +52,11 @@ const Header = () =>{
                         className=" text-black flex w-screen h-screen absolute z-[80] left-0 top-0 bg-[#f1f1f0] justify-center items-center"
                         >
                         <nav className="font-[600] gap-y-8 flex flex-col">
-                            <button>HOME</button>
-                            <button>SHOP</button>
-                            <button>PAGES</button>
-                            <button>ABOUT US</button>
-                            <button>CONTACT</button>
+                        <Link href="/">Home</Link>
+                        <Link href="/Shop">Shop</Link>
+                        <Link href="/Category">Category</Link>
+                        <Link href="/About-us">About us</Link>
+                        <Link href="/Contact">Contact</Link>
                         </nav>
                     </motion.div>
                 )}
@@ -68,11 +69,11 @@ const Header = () =>{
                 </div>
 
                 <div className="gap-x-16 flex">
-                    <button>HOME</button>
-                    <button>SHOP</button>
-                    <button>PAGES</button>
-                    <button>ABOUT US</button>
-                    <button>CONTACT</button>
+                    <Link href="/">Home</Link>
+                    <Link href="/Shop">Shop</Link>
+                    <Link href="/Category">Category</Link>
+                    <Link href="/About-us">About us</Link>
+                    <Link href="/Contact">Contact</Link>
                 </div>
                 
                 <div className="flex gap-x-8 items-center">

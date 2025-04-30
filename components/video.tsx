@@ -10,7 +10,7 @@ export const VideoPage = () =>{
         control.start({
             rotate:[null, 360],
             transition: {
-                duration: 15,
+                duration: 10,
                 repeat: Infinity,
                 ease: "linear"
             }

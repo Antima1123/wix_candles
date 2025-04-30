@@ -8,22 +8,45 @@ import type {
 
 const tables = [
   {
-    // table details
-    name: "user",
+    name: "admin_table",
     checkConstraints: {},
     foreignKeys: {},
     primaryKey: ["id"],
     uniqueConstraints: {},
     columns: [
-      // jab db me schema ho tab khud se ajata hai, ohh
       {
-        name: "age",
+        name: "admin_name",
         type: "text",
         notNull: true,
         unique: false,
         defaultValue: null,
         comment: "",
       },
+      {
+        name: "id",
+        type: "text",
+        notNull: true,
+        unique: true,
+        defaultValue: null,
+        comment: "",
+      },
+      {
+        name: "password",
+        type: "text",
+        notNull: true,
+        unique: false,
+        defaultValue: null,
+        comment: "",
+      },
+    ],
+  },
+  {
+    name: "discount_information",
+    checkConstraints: {},
+    foreignKeys: {},
+    primaryKey: ["id"],
+    uniqueConstraints: {},
+    columns: [
       {
         name: "email",
         type: "text",
@@ -48,6 +71,127 @@ const tables = [
         defaultValue: null,
         comment: "",
       },
+      {
+        name: "newslatter",
+        type: "bool",
+        notNull: false,
+        unique: false,
+        defaultValue: "false",
+        comment: "",
+      },
+    ],
+  },
+  {
+    name: "product_table",
+    checkConstraints: {},
+    foreignKeys: {},
+    primaryKey: ["id"],
+    uniqueConstraints: {},
+    columns: [
+      {
+        name: "category",
+        type: "text",
+        notNull: false,
+        unique: false,
+        defaultValue: null,
+        comment: "",
+      },
+      {
+        name: "created_at",
+        type: "timestamp without time zone",
+        notNull: false,
+        unique: false,
+        defaultValue: "now()",
+        comment: "",
+      },
+      {
+        name: "description",
+        type: "text",
+        notNull: true,
+        unique: false,
+        defaultValue: null,
+        comment: "",
+      },
+      {
+        name: "featured",
+        type: "bool",
+        notNull: false,
+        unique: false,
+        defaultValue: "false",
+        comment: "",
+      },
+      {
+        name: "id",
+        type: "text",
+        notNull: true,
+        unique: true,
+        defaultValue: null,
+        comment: "",
+      },
+      {
+        name: "img",
+        type: "text",
+        notNull: true,
+        unique: false,
+        defaultValue: null,
+        comment: "",
+      },
+      {
+        name: "inStock",
+        type: "int",
+        notNull: true,
+        unique: false,
+        defaultValue: null,
+        comment: "",
+      },
+      {
+        name: "other_images",
+        type: "multiple",
+        notNull: false,
+        unique: false,
+        defaultValue: null,
+        comment: "",
+      },
+      {
+        name: "previous_price",
+        type: "int",
+        notNull: false,
+        unique: false,
+        defaultValue: null,
+        comment: "",
+      },
+      {
+        name: "price",
+        type: "int",
+        notNull: true,
+        unique: false,
+        defaultValue: null,
+        comment: "",
+      },
+      {
+        name: "productname",
+        type: "text",
+        notNull: true,
+        unique: false,
+        defaultValue: null,
+        comment: "",
+      },
+      {
+        name: "slug",
+        type: "text",
+        notNull: true,
+        unique: false,
+        defaultValue: null,
+        comment: "",
+      },
+      {
+        name: "updated_at",
+        type: "timestamp without time zone",
+        notNull: false,
+        unique: false,
+        defaultValue: "now()",
+        comment: "",
+      },
     ],
   },
 ] as const;
@@ -55,20 +199,29 @@ const tables = [
 export type SchemaTables = typeof tables;
 export type InferredTypes = SchemaInference<SchemaTables>;
 
-export type User = InferredTypes["user"];
-export type UserRecord = User & XataRecord;
+export type AdminTable = InferredTypes["admin_table"];
+export type AdminTableRecord = AdminTable & XataRecord;
+
+export type DiscountInformation = InferredTypes["discount_information"];
+export type DiscountInformationRecord = DiscountInformation & XataRecord;
+
+export type ProductTable = InferredTypes["product_table"];
+export type ProductTableRecord = ProductTable & XataRecord;
 
 export type DatabaseSchema = {
-  user: UserRecord;
+  admin_table: AdminTableRecord;
+  discount_information: DiscountInformationRecord;
+  product_table: ProductTableRecord;
 };
 
 const DatabaseClient = buildClient();
 
 const defaultOptions = {
-  databaseURL: process.env.XATA_HTTP_ENDPOINT,
+  databaseURL: process.env.HTTP_ENDPOINT,
   apiKey: process.env.XATA_API_KEY,
   branch: process.env.XATA_BRANCH
 };
+
 
 export class XataClient extends DatabaseClient<DatabaseSchema> {
   constructor(options?: BaseClientOptions) {

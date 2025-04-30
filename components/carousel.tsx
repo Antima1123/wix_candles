@@ -1,4 +1,6 @@
 import Component from "./carousel-card"
+import { motion } from "framer-motion"
+
 const carouselItems = [
     {
       id: 1,
@@ -40,7 +42,8 @@ const carouselItems = [
 export const Carousel = () =>{
     return(
         <div className="w-full bg-[#F1F1F0] md:px-16">
-          <div className="py-32 max-w-screen-2xl mx-auto">
+          <div 
+            className="py-32 max-w-screen-2xl mx-auto">
             <Component no_items="1/3" items={carouselItems} position_arrow={"top"}/>
           </div>
         </div>

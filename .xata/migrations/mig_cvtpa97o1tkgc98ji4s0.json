@@ -1,0 +1,18 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cvtpa97o1tkgc98ji4s0",
+    "operations": [
+      {
+        "drop_table": {
+          "name": "product"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cvtpa97o1tkgc98ji4s0",
+  "parent": "sql_ac1ca6fce2eea4",
+  "schema": "public",
+  "startedAt": "2025-04-13T10:42:45.680825Z"
+}

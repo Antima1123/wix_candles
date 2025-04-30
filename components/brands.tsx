@@ -4,7 +4,7 @@ type props = {
 }
 export const Brands = ({img}:props) =>{
     return(
-        <div className="">
+        <div className=" flex justify-center items-center ">
             <Image
                 src={img}
                 height={200}
