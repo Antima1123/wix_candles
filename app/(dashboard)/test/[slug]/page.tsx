@@ -139,6 +139,7 @@ export default function ProductPage() {
           (<>
             {ProductData.otherImages.map((image, index)=>(
               <Image
+                  key={index}
                   src={image}
                   alt={ProductData.productname}
                   width={100}

@@ -137,6 +137,7 @@ export default function Home() {
         <div className="grid md:grid-cols-6 grid-cols-2 gap-y-4 w-full">
             {instaitem.map((item,index)=>(
               <InstaItem
+                key={index}
                 img={item.img}
               />
             ))}
