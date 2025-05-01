@@ -1,3 +1,4 @@
+"use client"
 import { BsFillHandbagFill } from "react-icons/bs";
 import { ServiceCard } from "./servicecard";
 import { IoGiftOutline } from "react-icons/io5";
