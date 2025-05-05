@@ -1,4 +1,5 @@
 import React from "react";
+import { Toaster } from 'sonner-native';
 import Footer from "../../components/footer";
 import Header from "@/components/header";
 
@@ -11,6 +12,7 @@ const DashboardLayout = ({children}: props) =>{
             <Header/>
             <div className="min-h-screen">
             {children}
+            <Toaster position="top-center"/>
             </div>
             <Footer/>
         </div>

@@ -1,35 +1,12 @@
 "use client"
 
 import * as React from "react"
-import Link from "next/link"
-import { toast } from "@/hooks/use-toast"
 import { useParams } from "next/navigation"
-import { Usegetproductbyid } from "@/features/product/use-get-slug"
-
-import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Skeleton } from "@/components/ui/skeleton"
 import {
-  Minus,
-  Plus,
-  Heart,
-  Share,
-  Star,
-  ShoppingBag,
   ChevronRight,
-  Check,
-  Facebook,
-  Twitter,
-  Instagram,
-  LinkIcon,
-  Mail,
-  ArrowRight,
 } from "lucide-react"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { useGetSuggestions } from "@/features/product/use-get-suggestion"
-import { set } from "zod"
-import SuggestionBycategory from "@/components/suggestion/suggestion-by-category"
-import PracticeSuggestion from "@/components/suggestion/practice-suggestion"
 import Practicesuggestionui from "@/components/suggestion/practice-suggestion"
 import { Practiceslug } from "@/features/practice/practiceslug"
 import Image from "next/image"

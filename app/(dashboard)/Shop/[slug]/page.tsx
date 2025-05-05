@@ -4,16 +4,13 @@ import * as React from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
-import { toast } from "@/hooks/use-toast"
 import { useParams } from "next/navigation"
 import { Usegetproductbyid } from "@/features/product/use-get-slug"
 
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Progress } from "@/components/ui/progress"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Skeleton } from "@/components/ui/skeleton"
 import {
   Minus,
@@ -149,31 +146,6 @@ export default function ProductPage() {
       if (newQuantity > ProductData.inStock && ProductData.inStock > 0) return ProductData.inStock
       if (ProductData.inStock <= 0) return 1
       return newQuantity
-    })
-  }
-
-  // Add to cart functionality
-  const handleAddToCart = () => {
-    toast({
-      title: "Added to cart",
-      description: `${quantity} x ${ProductData.productname}`,
-      action: (
-        <Link href="/cart">
-          <Button variant="outline" size="sm">
-            View Cart
-          </Button> 
-        </Link>
-      ),
-    })
-  }
-
-  // Toggle wishlist
-  const handleWishlist = () => {
-    setIsWishlisted((prev) => !prev)
-    toast({
-      title: isWishlisted ? "Removed from wishlist" : "Added to wishlist",
-      description: ProductData.productname,
-      variant: "default",
     })
   }
 
@@ -379,7 +351,6 @@ export default function ProductPage() {
 
               {/* Add to Cart Button */}
               <Button
-                onClick={handleAddToCart}
                 disabled={!canAddToCart}
                 className="flex-1 font-medium h-12 bg-black hover:bg-black/90 text-white"
               >
@@ -392,7 +363,6 @@ export default function ProductPage() {
               <Button
                 variant="outline"
                 size="icon"
-                onClick={handleWishlist}
                 className="h-12 w-12 relative border-neutral-200 hover:bg-neutral-50"
               >
                 <AnimatePresence>
